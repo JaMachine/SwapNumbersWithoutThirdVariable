@@ -7,14 +7,13 @@ public class SwapNumbers {
 	static int n1 = 0, n2 = 0;
 
 	public static void main(String[] args) throws InterruptedException {
-		System.out.println("ENTER TWO NUMBERS !!!\n");
 		takeNumbers();
-		System.out.println("\nNumber one = " + n1 + "\n" + "Number two = " + n2+"\n");
 		swapNumbers();
 
 	}
 
 	private static void takeNumbers() {
+		System.out.println("ENTER TWO NUMBERS !!!\n");
 		Scanner in = new Scanner(System.in);
 		try {
 			n1 = in.nextInt();
@@ -24,6 +23,7 @@ public class SwapNumbers {
 			System.out.println("Please enter digits only !!!");
 			takeNumbers();
 		}
+		System.out.println("\nNumber one = " + n1 + "\n" + "Number two = " + n2 + "\n");
 
 	}
 
