@@ -7,8 +7,12 @@ public class SwapNumbers {
 	static int n1 = 0, n2 = 0;
 
 	public static void main(String[] args) throws InterruptedException {
+
 		takeNumbers();
+		System.out.println("\nNumber one = " + n1 + "\n" + "Number two = " + n2 + "\n");
+
 		swapNumbers();
+		System.out.println("\n\nNumber one = " + n1 + "\n" + "Number two = " + n2);
 
 	}
 
@@ -20,11 +24,9 @@ public class SwapNumbers {
 			n2 = in.nextInt();
 			in.close();
 		} catch (Exception e) {
-			System.out.println("Please enter digits only !!!");
+			System.out.println("Please enter digits only !!!\n");
 			takeNumbers();
 		}
-		System.out.println("\nNumber one = " + n1 + "\n" + "Number two = " + n2 + "\n");
-
 	}
 
 	private static void swapNumbers() throws InterruptedException {
@@ -59,9 +61,5 @@ public class SwapNumbers {
 		t2.start();
 		t.join();
 		t2.join();
-
-		System.out.println("\n\nNumber one = " + n1 + "\n" + "Number two = " + n2);
-
 	}
-
 }
